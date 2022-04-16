@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: clamp(0.8rem, 5vw, 1.5rem);
+  background: #fff;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 90vw;
+  padding: 0 30px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.left-item .button button {
+  width: 20rem;
+  background-color: #d25400;
+  color: #fff;
+  border: none;
+  border-radius: 1rem;
+  outline-color: #b94a00;
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.left-item button:hover {
+  opacity: 0.85;
+}
+
+.api-table .btn {
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.api-table .btn:hover {
+  opacity: 0.85;
+}
+
+.api-table .delete-btn {
+  background-color: #d25400;
+  border: none;
+  outline-color: #b94a00;
+  margin-right: 1rem;
+}
+
+.api-table .edit-btn {
+  background-color: #1b6fab;
+  outline-color: #186195;
+  border: none;
+}
+
+.api-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20rem;
+}
+
+.left-item {
+  width: 30%;
+}
+
+.left-item .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.left-item .form .field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.left-item .form .field input {
+  min-width: 30rem;
+  background-color: #ebebeb;
+  border: none;
+  outline-color: #f3f1f2;
+  border-radius: 0.5rem;
+  padding: 1.3rem 2rem;
+}
+
+.left-item .form .field input:focus {
+  outline: 1px solid #bec3c9;
+}
+
+.left-item .form .field label {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.right-item {
+  width: 70%;
+}
+
+.right-item .key-manager {
+  padding: 2rem;
+}
+
+.right-item .key-manager h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-size: 4rem;
+}
+
+.right-item .api__content {
+  background-color: #f3f1f2;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.right-item .api__content .api-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.right-item .api__content .api-table tr:first-child {
+  background-color: #bec3c9;
+  padding: 2rem;
+  font-weight: 600;
+  font-size: 1.65rem;
+}
+
+.right-item .api__content .api-table tr {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.right-item .api__content .api-table tr:hover {
+  background-color: #f8f8f8;
+}
+
+.right-item .api__content .api-table tr:first-child:hover {
+  background-color: #bec3c9;
+}
+
+.right-item .api__content .api-table th {
+  padding: 1rem;
+}
+
+.right-item .api__content .api-table th:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.right-item .api__content .api-table th:last-child {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.right-item .api__content .api-table td {
+  text-align: center;
+  padding: 1rem;
+  font-weight: 500;
+}
+
+.right-item .api__content .api-table td:first-of-type {
+  font-weight: 800;
+}
+/*# sourceMappingURL=style.css.map */

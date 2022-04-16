@@ -1,0 +1,117 @@
+@import "./config";
+@import "./utilities";
+@import "./buttons";
+
+.api-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20rem;
+}
+
+.left-item {
+  width: 30%;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin: 1rem 0;
+
+      input {
+        min-width: 30rem;
+        background-color: $light-gray-color1;
+        border: none;
+        outline-color: $light-gray-color2;
+        border-radius: 0.5rem;
+        padding: 1.3rem 2rem;
+      }
+
+      input:focus {
+        outline: 1px solid $dark-gray;
+      }
+
+      label {
+        font-size: 1.6rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.right-item {
+  width: 70%;
+
+  .key-manager {
+    padding: 2rem;
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: 600;
+      font-size: 4rem;
+    }
+  }
+
+  .api__content {
+    background-color: $light-gray-color2;
+    border-radius: 1rem;
+    padding: 2rem;
+
+    .api-table {
+      width: 100%;
+      border-collapse: collapse;
+
+      tr:first-child {
+        background-color: $dark-gray;
+        padding: 2rem;
+        font-weight: 600;
+        font-size: 1.65rem;
+      }
+
+      tr {
+        transition: all 0.2s ease;
+      }
+
+      tr:hover {
+        background-color: lighten($light-gray-color1, 5%);
+      }
+
+      tr:first-child:hover {
+        background-color: $dark-gray;
+      }
+
+      th {
+        padding: 1rem;
+      }
+
+      th:first-child {
+        // border-left-style: solid;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+      th:last-child {
+        // border-right-style: solid;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      td {
+        text-align: center;
+        padding: 1rem;
+        font-weight: 500;
+      }
+
+      td:first-of-type {
+        font-weight: 800;
+      }
+    }
+  }
+}
