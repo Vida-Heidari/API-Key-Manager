@@ -9,9 +9,11 @@
     padding: 1rem 2rem;
     margin: 1rem 0;
     transition: all 0.3s ease;
-  }
-  button:hover {
-    opacity: 0.85;
+
+    &:hover {
+      opacity: 0.95;
+      transform: scale(0.98);
+    }
   }
 }
 
@@ -21,10 +23,12 @@
     padding: 0.5rem 1rem;
     border-radius: 1rem;
     transition: all 0.3s ease;
-  }
+    scale: 1;
 
-  .btn:hover {
-    opacity: 0.85;
+    &:hover {
+      opacity: 0.95;
+      transform: scale(0.98);
+    }
   }
 
   .delete-btn {
