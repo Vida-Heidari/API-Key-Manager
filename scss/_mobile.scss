@@ -1,9 +1,11 @@
 @media (max-width: 996px) {
   .api__main {
+    width: 100%;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
       "left-item"
       "right-item";
+    align-items: center;
   }
 }
 
