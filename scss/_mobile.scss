@@ -1,0 +1,11 @@
+@media (max-width: 996px) {
+  .api__main {
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "left-item"
+      "right-item";
+  }
+}
+
+// @media (max-width: 696px) {
+// }

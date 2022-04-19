@@ -1,6 +1,9 @@
 .left-item {
-  .button button {
-    width: 20rem;
+  .button {
+    width: 100%;
+  }
+  .submit__btn {
+    width: 100%;
     background-color: $orange-color;
     color: $white-color;
     border: none;
@@ -19,6 +22,7 @@
 
 .api-table {
   .btn {
+    font-size: 1.1rem;
     color: $white-color;
     padding: 0.5rem 1rem;
     border-radius: 1rem;
