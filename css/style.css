@@ -31,8 +31,8 @@ a {
 }
 
 .container {
-  max-width: 90vw;
-  padding: 0 30px;
+  max-width: 100vw;
+  padding: 0 3rem;
   margin: 0 auto;
   overflow: auto;
 }
@@ -53,6 +53,13 @@ a {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 20rem;
+}
+
+.api__title h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-size: 4rem;
 }
 
 .api__main {
@@ -131,13 +138,6 @@ a {
   padding: 2rem;
 }
 
-.api__main .right-item .key-manager h1 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-weight: 600;
-  font-size: 4rem;
-}
-
 .api__main .right-item .api__content {
   background-color: #f3f1f2;
   border-radius: 1rem;
@@ -201,9 +201,7 @@ a {
 }
 
 .left-item .submit__btn:hover {
-  opacity: 0.95;
-  -webkit-transform: scale(0.98);
-          transform: scale(0.98);
+  opacity: 0.85;
 }
 
 .api-table .btn {
@@ -217,9 +215,7 @@ a {
 }
 
 .api-table .btn:hover {
-  opacity: 0.95;
-  -webkit-transform: scale(0.98);
-          transform: scale(0.98);
+  opacity: 0.85;
 }
 
 .api-table .delete-btn {
@@ -237,13 +233,21 @@ a {
 
 @media (max-width: 996px) {
   .api__main {
-    width: 100%;
+    grid-auto-columns: 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas: "left-item" "right-item";
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .delete-btn {
+    margin: 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

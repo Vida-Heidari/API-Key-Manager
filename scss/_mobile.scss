@@ -1,6 +1,13 @@
+// @media (max-width: 1024px) and (min-width: 997px) {
+//   .delete-btn {
+//     margin: 1rem 0;
+//   }
+// }
+
 @media (max-width: 996px) {
   .api__main {
-    width: 100%;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
       "left-item"
@@ -9,5 +16,8 @@
   }
 }
 
-// @media (max-width: 696px) {
-// }
+@media (max-width: 640px) {
+  .delete-btn {
+    margin: 1rem;
+  }
+}

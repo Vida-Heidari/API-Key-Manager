@@ -12,7 +12,13 @@
   justify-content: center;
   align-items: center;
   margin-top: 20rem;
-  // margin: auto;
+}
+
+.api__title h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-size: 4rem;
 }
 
 .api__main {
@@ -26,6 +32,7 @@
   .left-item {
     grid-area: left-item;
     width: 100%;
+    // width: Min(100%, 80%);
 
     .form {
       display: flex;
@@ -70,13 +77,6 @@
 
     .key-manager {
       padding: 2rem;
-
-      h1 {
-        text-align: center;
-        margin-bottom: 2rem;
-        font-weight: 600;
-        font-size: 4rem;
-      }
     }
 
     .api__content {
