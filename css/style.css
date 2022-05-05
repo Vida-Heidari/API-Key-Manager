@@ -72,16 +72,16 @@ a {
       grid-template-rows: 1fr;
   gap: 20px 20px;
       grid-template-areas: "left-item right-item";
+  width: 100%;
 }
 
 .api__main .left-item {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: left-item;
-  width: 100%;
 }
 
-.api__main .left-item .form {
+.api__main .left-item .api-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,7 +97,7 @@ a {
           justify-content: center;
 }
 
-.api__main .left-item .form .field {
+.api__main .left-item .api-form .api__field {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -110,7 +110,7 @@ a {
   margin: 1rem 0;
 }
 
-.api__main .left-item .form .field input {
+.api__main .left-item .api-form .api__field input {
   background-color: #ebebeb;
   border: none;
   outline-color: #f3f1f2;
@@ -118,11 +118,11 @@ a {
   padding: 1.3rem 2rem;
 }
 
-.api__main .left-item .form .field input:focus {
+.api__main .left-item .api-form .api__field input:focus {
   outline: 1px solid #bec3c9;
 }
 
-.api__main .left-item .form .field label {
+.api__main .left-item .api-form .api__field label {
   font-size: 1.6rem;
   font-weight: 500;
 }
@@ -131,7 +131,6 @@ a {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: right-item;
-  width: 100%;
 }
 
 .api__main .right-item .key-manager {
@@ -201,7 +200,7 @@ a {
 }
 
 .left-item .submit__btn:hover {
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 .api-table .btn {
@@ -215,7 +214,7 @@ a {
 }
 
 .api-table .btn:hover {
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 .api-table .delete-btn {
@@ -250,4 +249,3 @@ a {
     margin: 1rem;
   }
 }
-/*# sourceMappingURL=style.css.map */

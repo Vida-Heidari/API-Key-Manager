@@ -25,8 +25,8 @@
           </div>
           <div class="api__main">
             <div class="left-item">
-              <form class="form">
-                <div class="user field">
+              <form class="api-form">
+                <div class="api-user api__field">
                   <label for="username" class="user__label">User Name</label>
                   <input
                     type="text"
@@ -36,7 +36,7 @@
                   />
                 </div>
 
-                <div class="api-key field">
+                <div class="api-key api__field">
                   <label for="api-key" class="key__label">API Key</label>
                   <input
                     type="text"
@@ -46,7 +46,7 @@
                   />
                 </div>
 
-                <div class="api-secret field">
+                <div class="api-secret api__field">
                   <label for="api-secret" class="secret__label"
                     >API Secret</label
                   >
@@ -68,24 +68,16 @@
               <div class="key-manager">
                 <div class="api__content">
                   <table class="api-table">
-                    <tr>
-                      <th>#</th>
-                      <th>User Name</th>
-                      <th>Api Key</th>
-                      <th>Api Secret</th>
-                      <th></th>
-                    </tr>
-
-                    <tr class="table__row">
-                      <td class="user__order">1</td>
-                      <td class="user__name">Vida</td>
-                      <td class="user__key">askjhd324dsakj</td>
-                      <td class="user__secret">adhf***********p2</td>
-                      <td>
-                        <button class="btn delete-btn">Delete</button>
-                        <button class="btn edit-btn">Edit</button>
-                      </td>
-                    </tr>
+                    <thead>
+                      <tr class="table__row">
+                        <th class="row__order">#</th>
+                        <th class="row__username">User Name</th>
+                        <th class="row__key">Api Key</th>
+                        <th class="row__secret">Api Secret</th>
+                        <th class="row__btns"></th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
                   </table>
                 </div>
               </div>
