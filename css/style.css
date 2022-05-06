@@ -242,6 +242,94 @@ a {
   margin-right: 1rem;
 }
 
+.popup__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.popup__wrapper .popup__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  padding: 4rem Min(5vw, 1rem);
+  text-align: center;
+  width: Min(90%, 50rem);
+  border-radius: 0.5rem;
+  background-color: #fff;
+  word-wrap: break-word;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.popup__wrapper .popup__content .popup__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: Min(5vw, 2.5rem);
+}
+
+@media screen and (min-width: 300px) {
+  .popup__wrapper .popup__content .popup__btns {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .popup__wrapper .popup__content .popup__btns .popup__btn {
+    width: Min(100%, 10rem);
+    padding: Min(2.5vw, 0.5rem) Min(2.5vw, 2rem);
+    background-color: transparent;
+    border: 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .popup__wrapper .popup__content .popup__btns:hover {
+    opacity: 0.9;
+  }
+  .popup__wrapper .popup__content .popup__btns .popup__btn--cancel {
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+  .popup__wrapper .popup__content .popup__btns .popup__btn--delete {
+    background-color: #d25400;
+    color: #fff;
+  }
+}
+
+.popup__Wrapper--show {
+  visibility: visible;
+  opacity: 1;
+}
+
 @media (max-width: 996px) {
   .api__main {
     grid-auto-columns: 1fr;

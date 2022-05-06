@@ -12,7 +12,7 @@ const apiList = document.querySelector(".table__body");
 const editBtn = document.querySelector(".edit-btn");
 const deleteBtn = document.querySelector(".delete-btn");
 
-const apiInfo = [];
+let apiInfo = [];
 let formState = "add";
 let selectedId = null;
 // ------------------- Functions -------------------
@@ -95,6 +95,11 @@ const generateListItem = (index, data) => {
     editListItem(id);
   });
 
+  newItem.querySelector(".item__delete").addEventListener("click", () => {
+    displayPopup(`Are you sure you want to delet "${username}"?`);
+    selectedId = id;
+  });
+
   apiList.appendChild(newItem);
 };
 
@@ -122,3 +127,35 @@ const editListItem = (id) => {
   formState = "edit";
   selectedId = id;
 };
+
+const deleteListItem = (id) => {
+  apiInfo = apiInfo.filter((item) => item.id !== id);
+
+  displayListItems(apiInfo);
+};
+
+// ------------------- show Popup to confirm delete action before actually deleting item from list
+
+const popup = document.querySelector("#popup");
+
+const displayPopup = (msg) => {
+  popup.querySelector(".popup__text").innerText = msg;
+  popup.classList.add("popup__Wrapper--show");
+};
+
+const closePopup = () => {
+  popup.classList.remove("popup__Wrapper--show");
+};
+
+const popupCancelBtn = popup.querySelector(".popup__btn--cancel");
+const popupDeleteBtn = popup.querySelector(".popup__btn--delete");
+
+popupCancelBtn.addEventListener("click", () => {
+  closePopup();
+});
+
+popupDeleteBtn.addEventListener("click", () => {
+  deleteListItem(selectedId);
+  closePopup();
+  selectedId = null;
+});
