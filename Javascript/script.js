@@ -16,7 +16,6 @@ let apiInfo = [];
 let formState = "add";
 let selectedId = null;
 // ------------------- Functions -------------------
-// function OnAddInput
 
 // ------------------- Event Listeners -------------------
 apiForm.addEventListener("submit", (e) => {
@@ -25,24 +24,31 @@ apiForm.addEventListener("submit", (e) => {
   const formData = new FormData(e.target);
   const formProps = Object.fromEntries(formData);
 
-  if (formState === "add") {
-    // push formProps into apiInfo and set a Unique ID for that info
-    apiInfo.push({ ...formProps, id: new Date().getTime() });
-  } else if (formState === "edit") {
-    const foundIndex = apiInfo.findIndex((item) => item.id === selectedId);
+  const usernameValue = usernameInput.value;
+  const apiKeyValue = apiKeyInput.value;
+  const apiSecretValue = apiSecretInput.value;
 
-    if (foundIndex === -1) {
-      alert("Not Found");
-      return;
+  if (usernameValue && apiKeyValue && apiSecretValue) {
+    if (formState === "add") {
+      // push formProps into apiInfo and set a Unique ID for that info
+      apiInfo.push({ ...formProps, id: new Date().getTime() });
+    } else if (formState === "edit") {
+      const foundIndex = apiInfo.findIndex((item) => item.id === selectedId);
+
+      if (foundIndex === -1) {
+        console.log("Not Found");
+        return;
+      }
+      apiInfo.splice(foundIndex, 1, { id: selectedId, ...formProps });
+      formState = "add";
+      selectedId = null;
+      submitBtn.innerText = "Submit";
     }
-    apiInfo.splice(foundIndex, 1, { id: selectedId, ...formProps });
-    formState = "add";
-    selectedId = null;
-    submitBtn.innerText = "Submit";
+  } else {
+    alert("Oops... Please fill the form properly");
   }
 
   displayListItems(apiInfo);
-
   apiForm.reset();
 });
 
@@ -96,7 +102,7 @@ const generateListItem = (index, data) => {
   });
 
   newItem.querySelector(".item__delete").addEventListener("click", () => {
-    displayPopup(`Are you sure you want to delet "${username}"?`);
+    displayPopup(`Are you sure you want to delete "${username}"?`);
     selectedId = id;
   });
 
