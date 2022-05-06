@@ -143,18 +143,27 @@ a {
   padding: 2rem;
 }
 
+.api__main .right-item .api__content .table__header tr {
+  background-color: #bec3c9;
+  padding: 2rem;
+}
+
+.api__main .right-item .api__content .table__header tr:first-of-type:hover {
+  background-color: #bec3c9;
+}
+
 .api__main .right-item .api__content .api-table {
   width: 100%;
   border-collapse: collapse;
 }
 
-.api__main .right-item .api__content .api-table tr:first-child {
-  background-color: #bec3c9;
-  padding: 2rem;
+.api__main .right-item .api__content .api-table tr {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
-.api__main .right-item .api__content .api-table tr:first-child:hover {
-  background-color: #bec3c9;
+.api__main .right-item .api__content .api-table tr:hover {
+  background-color: #f8f8f8;
 }
 
 .api__main .right-item .api__content .api-table th {
@@ -203,31 +212,34 @@ a {
   opacity: 0.9;
 }
 
-.api-table .btn {
-  font-size: 1.1rem;
+.row__btns .item__btn {
   color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border: 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
   padding: 0.5rem 1rem;
-  border-radius: 1rem;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  scale: 1;
+  margin: 0 0.5rem;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
-.api-table .btn:hover {
+.row__btns .item__btn:hover {
   opacity: 0.9;
 }
 
-.api-table .delete-btn {
+.row__btns .item__edit {
+  background-color: #1b6fab;
+  outline-color: #186195;
+  border: none;
+}
+
+.row__btns .item__delete {
   background-color: #d25400;
   border: none;
   outline-color: #b94a00;
   margin-right: 1rem;
-}
-
-.api-table .edit-btn {
-  background-color: #1b6fab;
-  outline-color: #186195;
-  border: none;
 }
 
 @media (max-width: 996px) {

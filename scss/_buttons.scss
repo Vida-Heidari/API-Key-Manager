@@ -19,30 +19,37 @@
   }
 }
 
-.api-table {
-  .btn {
+.row__btns {
+  // display: flex;
+  // align-items: center;
+  // gap: 0.5rem;
+
+  .item__btn {
+    color: #fff;
     font-size: 1.1rem;
-    color: $white-color;
+    font-weight: 500;
+    border: 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
     padding: 0.5rem 1rem;
-    border-radius: 1rem;
-    transition: all 0.3s ease;
-    scale: 1;
+    margin: 0 0.5rem;
+    transition: opacity 0.3s ease-in-out;
 
     &:hover {
       opacity: 0.9;
     }
   }
 
-  .delete-btn {
+  .item__edit {
+    background-color: $blue-color;
+    outline-color: darken($blue-color, 5%);
+    border: none;
+  }
+
+  .item__delete {
     background-color: $orange-color;
     border: none;
     outline-color: darken($orange-color, 5%);
     margin-right: 1rem;
-  }
-
-  .edit-btn {
-    background-color: $blue-color;
-    outline-color: darken($blue-color, 5%);
-    border: none;
   }
 }
